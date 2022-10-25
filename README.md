@@ -1,6 +1,6 @@
 # Terraform
 
-### Creation 
+### Creation of two servers (LEMP and LAMP) and a load balancer in Yandex Cloud using Terraform.
 
 Check the configuration using the command:
 
@@ -9,7 +9,6 @@ Check the configuration using the command:
 Format the configuration files in the current folder and subfolders:
 
 `terraform fmt`
-
 
 After checking the configuration, run the command:
 
