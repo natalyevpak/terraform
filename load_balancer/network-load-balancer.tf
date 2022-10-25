@@ -23,8 +23,8 @@ data "terraform_remote_state" "vpc" {
     bucket     = "tf-state-bucket-evna"
     region     = "ru-central1-a"
     key        = "lemp.tfstate"
-    access_key = "YCAJEdMctZxABzQTZ_K6wt6-U"
-    secret_key = "YCMlPKrbgStu2BpEuSnZPqXCDvz8j4G3qhSf-3iV"
+    access_key = ""
+    secret_key = ""
 
     skip_region_validation      = true
     skip_credentials_validation = true
@@ -60,16 +60,12 @@ resource "yandex_lb_target_group" "web-servers" {
   name = "web-servers-target-group"
 
   target {
-    #subnet_id = yandex_vpc_subnet.subnet1.id
     subnet_id = data.terraform_remote_state.vpc.outputs.vpc_subnet_id_vm_1
-    #address   = yandex_compute_instance.vm.network_interface.0.ip_address
     address   = data.terraform_remote_state.vpc.outputs.internal_ip_address_vm_1
   }
 
   target {
-    #subnet_id = yandex_vpc_subnet.subnet2.id
     subnet_id = data.terraform_remote_state.vpc.outputs.vpc_subnet_id_vm_2
-    #address  = yandex_compute_instance.vm.network_interface.0.ip_address
     address   = data.terraform_remote_state.vpc.outputs.internal_ip_address_vm_2
 
   }
