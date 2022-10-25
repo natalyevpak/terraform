@@ -1,6 +1,6 @@
 # Terraform
 
-### Файлы для создания LEMP в Яндекс Облаке.
+### Creation 
 
 Check the configuration using the command:
 
@@ -20,3 +20,7 @@ The terminal will display a list of resources with parameters. This is a test st
 To create resources, run the command:
 
 `terraform apply`
+
+To delete resources, run the command:
+
+`terraform apply -destroy`
