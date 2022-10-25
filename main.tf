@@ -12,8 +12,8 @@ terraform {
     bucket     = "tf-state-bucket-evna"
     region     = "ru-central1-a"
     key        = "lemp.tfstate"
-    access_key = "YCAJEdMctZxABzQTZ_K6wt6-U"
-    secret_key = "YCMlPKrbgStu2BpEuSnZPqXCDvz8j4G3qhSf-3iV"
+    access_key = ""
+    secret_key = ""
 
     skip_region_validation      = true
     skip_credentials_validation = true
